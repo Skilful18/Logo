@@ -7,6 +7,7 @@
   <title>Logo</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
 </head>
 <body>
   <nav class="navbar">
@@ -20,19 +21,23 @@
         <div class="navbar__menu">
           <ul class="navbar-menu">
             <li class="navbar-menu__items">
-              <span>Услуги</span>
+              <span class="navbar-menu__item">Услуги</span>
+              <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span>Цены</span>
+              <span class="navbar-menu__item">Цены</span>
+              <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span>Отзывы</span>
+              <span class="navbar-menu__item">Отзывы</span>
+              <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span>Новости</span>
+              <span class="navbar-menu__item">Новости</span>
+              <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span>Контакты</span>
+              <span class="navbar-menu__item">Контакты</span>
             </li>
           </ul>
         </div>
@@ -51,5 +56,52 @@
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
+
+  <section class="hero">
+    <div class="slider">
+      <div class="slider__shadow">
+        <div class="slider__item">
+          <img src="img/hero/slider-1.jpg" class="slider__background" alt="background-hero">
+        </div>
+      </div>
+      <div class="slider__shadow"> 
+        <div class="slider__item">
+          <img src="img/hero/slider-2.jpg" class="slider__background" alt="background-hero">
+        </div>
+      </div> 
+      <div class="slider__shadow"> 
+        <div class="slider__item">
+          <img src="img/hero/slider-3.jpg" class="slider__background" alt="background-hero">
+        </div>
+      </div>
+      <div class="slider__shadow"> 
+        <div class="slider__item">
+          <img src="img/hero/slider-4.jpg" class="slider__background" alt="background-hero">
+        </div>
+      </div>
+    </div>
+    <!-- /.slider -->
+
+
+    <div class="hero-block">
+      <div class="hero__title">НАША БРИГАДА ПО МОНТИРОВАНИЮ ОТОПЛЕНИЯ И САНТЕХНИКИ
+      </div>
+      <!-- /.hero__title -->
+      <div class="hero__subtitle">вызов по Москве и Московской области</div>
+      <!-- /.hero__subtitle -->
+      <p class="hero__text">
+          Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.
+      </p>
+      <!-- /.hero__text -->
+      <button class="button hero__button">ПОДРОБНЕЕ</button>
+      <!-- /.button hero__button -->
+    </div>
+    <!-- /.hero-block -->
+  </section>
+  <!-- /.hero -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

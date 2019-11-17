@@ -1,7 +1,48 @@
 .navbar
+  &::before
+    content: ""
+    width: 60%
+    height: 100%
   &-block
     display: flex
+    justify-content: space-between
   &__logo
+    display: flex
+    flex-direction: column
+    align-items: center
     color: $logo
+    +bold
+    font-size: 15px
   &__menu
+    display: flex
+    justify-content: center
+    align-items: center
     color: $secondary
+  &-menu
+    display: flex
+    list-style-type: none
+    &__items
+      color: $secondary
+      font-size: 16px
+      +bold
+    &__item
+      margin-right: 20px
+    &__line
+      margin-right: 20px
+  &__info
+    background: url("../../img/navbar/navbar_phone.png") no-repeat
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-basis: 37%
+    +bold
+  &__contacts
+    display: flex
+    justify-content: center
+    aling-items: center
+  &__phone
+    color: $secondary
+    font-size: 18px
+  &__button
+    margin-left: 30px
+    padding: 6px 15px
