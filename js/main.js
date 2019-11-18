@@ -1,5 +1,5 @@
-/* Слайдер */
 $(document).ready(function() {
+  /* Слайдер */
   $('.slider').slick({
     dots:true,
     infinite: true,
@@ -9,5 +9,12 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 1000,
     arrows: false
+  });
+  /* меню гамбургер */
+  $('.mobile-menu').on('click', function(e) {
+    e.preventDefault();
+    $('.mobile-menu__btn').toggleClass('mobile-menu__active'),
+    $('.navbar__menu').toggleClass('navbar__menu-active'),
+    $(".hero").toggleClass('hero-active')
   });
 });

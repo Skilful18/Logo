@@ -1,8 +1,8 @@
 .hero
   &-block
     position: absolute
-    top: 280px
-    left: 147px
+    top: 29%
+    left: 10%
   &__title
     +bold
     font-size: 35px
@@ -44,8 +44,135 @@
 .slider
   &__shadow
     background: url("../../img/hero/hero-background.png") no-repeat
+    margin-bottom: 133px
   &__background
     width: 1920px
     height: 740px
     overflow: hidden
     opacity: 0.3
+@media (max-width: 1440px)
+  .hero
+    &__title
+      max-width: 875px 
+    &__text
+      max-width: 870px
+@media (max-width: 1200px)
+  .hero
+    &-block
+      left: 13%
+@media (max-width: 1160px)
+  .hero
+    &-block
+      left: 8%
+@media (max-width: 1115px)
+  .hero
+    &-block
+      left: 8%
+@media (max-width: 992px)
+  .hero
+    &-block
+      left: 13%
+      max-width: 740px
+@media (max-width: 912px)
+  .hero
+    &-block
+      left: 9%     
+@media (max-width: 850px)
+  .hero
+    &-block
+      left: 5%  
+@media (max-width: 800px)
+  .hero
+    &-block
+      left: 3%     
+@media (max-width: 768px)
+  .hero
+    &-block
+      left: 9%  
+      max-width: 580px
+    &__title
+      font-size: 28px
+    &__subtitle
+      font-size: 28px
+    &__text
+      font-size: 16px
+    &__button
+      font-size: 16px
+      padding: 10px 34px
+@media (max-width: 688px)
+  .hero
+    &-block
+      left: 7% 
+@media (max-width: 648px)
+  .hero
+    &-block
+      left: 5% 
+    &__text
+      max-width: 540px
+@media (max-width: 576px)
+  .slider
+    &__background
+      width: 1920px
+      height: 550px
+  .hero
+    &-active
+      display: none
+    &-block
+      top: 150px
+  .slick
+    &-dots
+      left: 170px
+@media (max-width: 500px)
+  .hero
+    &__title
+      font-size: 24px
+    &__subtitle
+      font-size: 24px
+    &__text
+      font-size: 14px
+    &__button
+      padding: 7px 26px
+  .slick
+    &-dots
+      left: 150px
+@media (max-width: 450px)
+  .slick
+    &-dots
+      left: 140px
+@media (max-width: 440px)
+  .slick
+    &-dots
+      left: 130px
+@media (max-width: 430px)
+  .slick
+    &-dots
+      left: 120px
+@media (max-width: 420px)
+  .slick
+    &-dots
+      left: 110px
+@media (max-width: 410px)
+  .slick
+    &-dots
+      left: 100px
+@media (max-width: 385px)
+  .slick
+    &-dots
+      left: 100px
+@media (max-width: 365px)
+  .slick
+    &-dots
+      left: 85px
+@media (max-width: 350px)
+  .slick
+    &-dots
+      left: 70px
+@media (max-width: 320px)
+  .slick
+    &-dots
+      left: 67px
+  .hero
+    &-block
+      top: 130px
+    &__text
+      margin-bottom: 30px

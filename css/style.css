@@ -65,7 +65,13 @@ button {
 
 @media (max-width: 1200px) {
   .container {
-    width: 760px;
+    width: 900px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 740px;
   }
 }
 
@@ -172,7 +178,9 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  aling-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar__phone {
@@ -185,11 +193,176 @@ button {
   padding: 6px 15px;
 }
 
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  .navbar-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 1300px) {
+  .navbar-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar__menu {
+    margin: auto;
+  }
+  .navbar-menu__line {
+    margin-right: 5px;
+  }
+  .navbar-menu__item {
+    margin-right: 5px;
+  }
+  .navbar__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar__contacts {
+    display: none;
+  }
+  .navbar__button {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    margin-left: -20px;
+  }
+  .navbar-menu__line {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__button {
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-menu {
+    display: block;
+    margin: auto;
+    z-index: 2;
+  }
+  .mobile-menu__btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #ffc800;
+    border-radius: 50px;
+    position: relative;
+  }
+  .mobile-menu__btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+  }
+  .mobile-menu__btn span:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+  .mobile-menu__btn span:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+  .mobile-menu__active span {
+    height: 0;
+  }
+  .mobile-menu__active span::before {
+    width: 20px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform-origin: 45% 60%;
+            transform-origin: 45% 60%;
+  }
+  .mobile-menu__active span::after {
+    width: 20px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform-origin: 65% -40%;
+            transform-origin: 65% -40%;
+  }
+  .navbar__menu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background: #222;
+    width: 100%;
+    height: 100vh;
+  }
+  .navbar__menu-active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+  .navbar-menu {
+    display: block;
+  }
+  .navbar-menu__items {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item {
+    color: #fffffe;
+    font-size: 20px;
+  }
+  .navbar__logo {
+    margin-right: 20px;
+  }
+}
+
 /* Подключение главную секцию */
 .hero-block {
   position: absolute;
-  top: 280px;
-  left: 147px;
+  top: 29%;
+  left: 10%;
 }
 
 .hero__title {
@@ -251,6 +424,7 @@ button {
 
 .slider__shadow {
   background: url("../../img/hero/hero-background.png") no-repeat;
+  margin-bottom: 133px;
 }
 
 .slider__background {
@@ -258,5 +432,271 @@ button {
   height: 740px;
   overflow: hidden;
   opacity: 0.3;
+}
+
+@media (max-width: 1440px) {
+  .hero__title {
+    max-width: 875px;
+  }
+  .hero__text {
+    max-width: 870px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-block {
+    left: 13%;
+  }
+}
+
+@media (max-width: 1160px) {
+  .hero-block {
+    left: 8%;
+  }
+}
+
+@media (max-width: 1115px) {
+  .hero-block {
+    left: 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-block {
+    left: 13%;
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 912px) {
+  .hero-block {
+    left: 9%;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-block {
+    left: 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-block {
+    left: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-block {
+    left: 9%;
+    max-width: 580px;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+  .hero__subtitle {
+    font-size: 28px;
+  }
+  .hero__text {
+    font-size: 16px;
+  }
+  .hero__button {
+    font-size: 16px;
+    padding: 10px 34px;
+  }
+}
+
+@media (max-width: 688px) {
+  .hero-block {
+    left: 7%;
+  }
+}
+
+@media (max-width: 648px) {
+  .hero-block {
+    left: 5%;
+  }
+  .hero__text {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider__background {
+    width: 1920px;
+    height: 550px;
+  }
+  .hero-active {
+    display: none;
+  }
+  .hero-block {
+    top: 150px;
+  }
+  .slick-dots {
+    left: 170px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero__title {
+    font-size: 24px;
+  }
+  .hero__subtitle {
+    font-size: 24px;
+  }
+  .hero__text {
+    font-size: 14px;
+  }
+  .hero__button {
+    padding: 7px 26px;
+  }
+  .slick-dots {
+    left: 150px;
+  }
+}
+
+@media (max-width: 450px) {
+  .slick-dots {
+    left: 140px;
+  }
+}
+
+@media (max-width: 440px) {
+  .slick-dots {
+    left: 130px;
+  }
+}
+
+@media (max-width: 430px) {
+  .slick-dots {
+    left: 120px;
+  }
+}
+
+@media (max-width: 420px) {
+  .slick-dots {
+    left: 110px;
+  }
+}
+
+@media (max-width: 410px) {
+  .slick-dots {
+    left: 100px;
+  }
+}
+
+@media (max-width: 385px) {
+  .slick-dots {
+    left: 100px;
+  }
+}
+
+@media (max-width: 365px) {
+  .slick-dots {
+    left: 85px;
+  }
+}
+
+@media (max-width: 350px) {
+  .slick-dots {
+    left: 70px;
+  }
+}
+
+@media (max-width: 320px) {
+  .slick-dots {
+    left: 67px;
+  }
+  .hero-block {
+    top: 130px;
+  }
+  .hero__text {
+    margin-bottom: 30px;
+  }
+}
+
+/* Секция услуги */
+.service {
+  background: url("../../img/service/service_background.jpg") repeat;
+  margin-bottom: 143px;
+}
+
+.service-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-block__card {
+  position: relative;
+  display: inline-block;
+  /* Style for "fff67d6f52" */
+  width: 377px;
+  height: 236px;
+  margin-right: 19px;
+  margin-bottom: 21px;
+}
+
+.service-block__title {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -40px;
+  color: #fcfafa;
+  font-family: 'Proxima Nova Regular',sans-serif;
+  font-weight: 400;
+}
+
+.service-block__button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  left: 50%;
+  margin-left: -77px;
+  margin-top: 19px;
+}
+
+/* Секция Почему мы * */
+.what .advantages {
+  background-image: url("../img/what/what-background.jpg");
+  background-position: left center;
+  background-size: 50%;
+  background-repeat: repeat-y;
+  max-width: 1186px;
+  max-height: 563px;
+}
+
+.what .advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.what .advantages__card {
+  /* Style for "Прямоуголь" */
+  width: 198px;
+  height: 168px;
+  background-color: #fff;
+  margin-right: 36px;
+  margin-bottom: 36px;
+}
+
+.what .advantages__title {
+  font-size: 18px;
+}
+
+.what .virtues {
+  background-image: url("../img/what/virtues-background.jpg");
+  background-position: center right;
+  background-size: contain;
+  background-repeat: repeat;
 }
 /*# sourceMappingURL=style.css.map */
