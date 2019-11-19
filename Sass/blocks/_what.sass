@@ -1,16 +1,29 @@
 .what
+  background: url("../../img/what/what-background.jpg") no-repeat
+  background-position: left center
+  background-size: 57%
+  background-repeat: repeat-y
+  position: relative
+  margin-bottom: 142px
+  &::before
+    content: ""
+    width: 50%
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0
+  &-block
+    width: 60%
+  &-button
+    margin-bottom: 70px
+    padding: 20px 31px
   .advantages
-    background-image: url("../img/what/what-background.jpg")
-    background-position: left center
-    background-size: 50%
-    background-repeat: repeat-y
-    max-width: 1186px
-    max-height: 563px
     &__list
       display: flex
-      flex-wrap: wrap
+      flex-flow: row wrap
     &__card
       /* Style for "Прямоуголь" */
+      display: block
       width: 198px
       height: 168px
       background-color: #fff
@@ -19,7 +32,21 @@
     &__title
       font-size: 18px
   .virtues
-    background-image: url("../img/what/virtues-background.jpg")
-    background-position: center right
-    background-size: contain
-    background-repeat: repeat
+    width: 43%
+    height: 100%
+    position: absolute
+    top: 12%
+    right: -2%
+    &__point
+      display: flex
+      align-items: center
+      margin-bottom: 80px
+    &__number
+      font-size: 35px
+      color: $main-color
+      margin-right: 10px
+      +bold
+    img
+      margin-right: 10px
+    &__title
+      font-size: 20px

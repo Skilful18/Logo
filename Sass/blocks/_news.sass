@@ -1,0 +1,33 @@
+.news
+  &-cards
+    display: flex
+  &__card
+    display: flex
+    flex-direction: column
+    margin-right: 20px
+    margin-bottom: 70px
+    img
+      margin-bottom: 30px
+    &__title
+      display: flex
+      align-items: center
+      margin-bottom: 27px
+    h1
+      +bold
+      font-size: 20px
+      color: $text-color
+      margin-right: 60px
+    span
+      display: flex
+      justify-content: flex-end
+    p
+      +reg
+      font-size: 18px
+      color: $text-color
+      line-height: 28px
+  &-button
+    margin-bottom: 70px
+    &__down
+      display: flex
+      margin: auto
+      margin-bottom: 76px

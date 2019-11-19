@@ -63,6 +63,15 @@ button {
   font-size: 16px;
 }
 
+.map {
+  width: 100%;
+  height: 742px;
+}
+
+.map__form {
+  background: url("img/map/map-bg.png");
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 900px;
@@ -639,6 +648,10 @@ button {
   margin-bottom: 21px;
 }
 
+.service-block__card:last-child {
+  margin-bottom: 120px;
+}
+
 .service-block__title {
   position: absolute;
   right: 0;
@@ -662,26 +675,51 @@ button {
   margin-top: 19px;
 }
 
-/* Секция Почему мы * */
-.what .advantages {
-  background-image: url("../img/what/what-background.jpg");
+.service__button {
+  margin-bottom: 70px;
+}
+
+/* Секция Почему мы */
+.what {
+  background: url("../../img/what/what-background.jpg") no-repeat;
   background-position: left center;
-  background-size: 50%;
+  background-size: 57%;
   background-repeat: repeat-y;
-  max-width: 1186px;
-  max-height: 563px;
+  position: relative;
+  margin-bottom: 142px;
+}
+
+.what::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.what-block {
+  width: 60%;
+}
+
+.what-button {
+  margin-bottom: 70px;
+  padding: 20px 31px;
 }
 
 .what .advantages__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .what .advantages__card {
   /* Style for "Прямоуголь" */
+  display: block;
   width: 198px;
   height: 168px;
   background-color: #fff;
@@ -694,9 +732,258 @@ button {
 }
 
 .what .virtues {
-  background-image: url("../img/what/virtues-background.jpg");
-  background-position: center right;
-  background-size: contain;
-  background-repeat: repeat;
+  width: 43%;
+  height: 100%;
+  position: absolute;
+  top: 12%;
+  right: -2%;
+}
+
+.what .virtues__point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.what .virtues__number {
+  font-size: 35px;
+  color: #ffc800;
+  margin-right: 10px;
+  font-family: 'Proxima Nova Semibold',sans-serif;
+  font-weight: 700;
+}
+
+.what .virtues img {
+  margin-right: 10px;
+}
+
+.what .virtues__title {
+  font-size: 20px;
+}
+
+/* Секция feedback */
+.feedback {
+  margin-bottom: 142px;
+  background: #010101;
+}
+
+.slider__foto {
+  margin: auto;
+  margin-top: 112px;
+  margin-bottom: 19px;
+}
+
+.slider__title {
+  text-align: center;
+  font-family: 'Proxima Nova Regular',sans-serif;
+  font-weight: 400;
+  color: #ffc800;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.slider__text {
+  text-align: center;
+  color: #fffffd;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.slider__score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider__score img {
+  margin-bottom: 172px;
+  margin-right: 7px;
+}
+
+.slider__score span {
+  color: #fefbfb;
+  font-size: 15px;
+  margin-right: 27px;
+}
+
+/* Секция news */
+.news-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 70px;
+}
+
+.news__card img {
+  margin-bottom: 30px;
+}
+
+.news__card__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 27px;
+}
+
+.news__card h1 {
+  font-family: 'Proxima Nova Semibold',sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #020202;
+  margin-right: 60px;
+}
+
+.news__card span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.news__card p {
+  font-family: 'Proxima Nova Regular',sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #020202;
+  line-height: 28px;
+}
+
+.news-button {
+  margin-bottom: 70px;
+}
+
+.news-button__down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-bottom: 76px;
+}
+
+/* Секция footer */
+.footer {
+  background: url("../../img/footer/footer-bg.jpg");
+}
+
+.footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 54px 0;
+}
+
+.footer__address img {
+  margin-right: 20px;
+}
+
+.footer__address span {
+  color: #fdfcfc;
+}
+
+.footer_social-network {
+  margin: 54px 0;
+}
+
+.footer_social-network img {
+  margin-right: 20px;
+}
+
+.footer__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.footer__info {
+  margin: 54px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__info-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.footer__info-mail img {
+  margin-right: 10px;
+}
+
+.footer__info-mail a {
+  color: #fefefe;
+}
+
+.footer__info-tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__info-tel img {
+  margin-right: 10px;
+}
+
+.footer__info-tel a {
+  color: #fefefe;
 }
 /*# sourceMappingURL=style.css.map */
