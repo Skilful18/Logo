@@ -1,17 +1,18 @@
 .news
+  background: #f1f1f1
+  min-height: 852px
   &-cards
     display: flex
   &__card
     display: flex
     flex-direction: column
     margin-right: 20px
-    margin-bottom: 70px
+    margin-bottom: 30px
     img
-      margin-bottom: 30px
+      margin-bottom: 12px
     &__title
       display: flex
       align-items: center
-      margin-bottom: 27px
     h1
       +bold
       font-size: 20px
@@ -25,9 +26,28 @@
       font-size: 18px
       color: $text-color
       line-height: 28px
+      max-width: 340px
   &-button
-    margin-bottom: 70px
+    margin: -25px 0 64px -30px
+    font-size: 28px
+    padding: 8px 54px
+    +bold
     &__down
       display: flex
+      font-size: 20px
       margin: auto
-      margin-bottom: 76px
+      +reg
+      padding: 15px 46px
+@media (max-width: 1275px)
+  .news
+    &-button
+      margin-left: -1px
+@media (max-width: 768px)
+  .news
+    &-cards
+      display: flex
+      flex-wrap: wrap
+    &__card
+      margin: auto
+      p
+        margin-bottom: 70px

@@ -15,8 +15,10 @@
   &-block
     width: 60%
   &-button
-    margin-bottom: 70px
-    padding: 20px 31px
+    padding: 15px 31px
+    +bold
+    font-size: 28px
+    margin: -26px 0 60px -30px
   .advantages
     &__list
       display: flex
@@ -29,24 +31,61 @@
       background-color: #fff
       margin-right: 36px
       margin-bottom: 36px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      &:last-child
+        margin-bottom: 95px
     &__title
       font-size: 18px
+      text-align: center
   .virtues
     width: 43%
     height: 100%
     position: absolute
-    top: 12%
+    top: 15%
     right: -2%
     &__point
       display: flex
       align-items: center
-      margin-bottom: 80px
+      margin-bottom: 46px
+      line-height: 25px
+      max-width: 410px
+      margin-right: 10px
     &__number
       font-size: 35px
       color: $main-color
       margin-right: 10px
       +bold
+      font-weight: 900
     img
       margin-right: 10px
     &__title
       font-size: 20px
+      +bold
+      color: $text-color
+@media (max-width: 1275px)
+  .what
+    &-button
+      margin-left: -1px
+@media (max-width: 1200px)
+  .what
+    .advantages
+      &__card
+        margin: 10px auto
+    .virtues
+      &__point
+        max-width: 310px
+@media (max-width: 992px)
+  .what
+    .advantages
+      &__card
+        margin: 2px auto
+    &-block
+      width: 55%
+@media (max-width: 768px)
+  .what
+    &-button
+      padding: 4px 30px
+

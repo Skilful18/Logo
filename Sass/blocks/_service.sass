@@ -19,18 +19,43 @@
       right: 0
       bottom: 10px
       font-size: 20px
-      top: 50%
-      left: 50%
+      top: 42%
+      left: 56%
       margin-left: -140px
       margin-top: -40px
       color: $service-text
       +reg
+      line-height: 28px
     &__button
       position: absolute
       right: 0
-      top: 50%
-      left: 50%
+      top: 48%
+      left: 53%
       margin-left: -77px
       margin-top: 19px
+      color: $text-color
   &__button
-    margin-bottom: 70px
+    margin: -25px 0 80px -30px
+    font-size: 35px
+    +bold
+@media (max-width: 1275px)
+  .service
+    &__button
+      margin-left: -1px
+@media (max-width: 1200px)
+  .service
+    &-block
+      &__card 
+        position: relative
+        display: inline-block
+        width: 350px
+        height: 236px
+        margin: 0 auto
+@media (max-width: 768px)
+  .service
+    &__button
+      font-size: 28px
+      padding: 4px 47px
+    &-block
+      &__card 
+        margin: 30px auto

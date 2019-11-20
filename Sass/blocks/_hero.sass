@@ -2,7 +2,6 @@
   &-block
     position: absolute
     top: 29%
-    left: 10%
   &__title
     +bold
     font-size: 35px
@@ -30,7 +29,7 @@
   &-dots
     position: absolute
     list-style-type: none
-    bottom: 29px
+    bottom: 156px
     right: 47%
     display: flex
   &-dots li
@@ -43,10 +42,10 @@
     padding: 10px 10px
 .slider
   &__shadow
-    background: url("../../img/hero/hero-background.png") no-repeat
+    background: #000
     margin-bottom: 133px
   &__background
-    width: 1920px
+    width: 100%
     height: 740px
     overflow: hidden
     opacity: 0.3
@@ -68,6 +67,9 @@
   .hero
     &-block
       left: 8%
+  .slick
+    &-dots
+      right: 43%
 @media (max-width: 992px)
   .hero
     &-block
@@ -88,7 +90,8 @@
 @media (max-width: 768px)
   .hero
     &-block
-      left: 9%  
+      left: 10% 
+      top: 23% 
       max-width: 580px
     &__title
       font-size: 28px
@@ -99,6 +102,12 @@
     &__button
       font-size: 16px
       padding: 10px 34px
+  .slick
+    &-dots
+      bottom: 200px
+  .slider
+    &__background
+      height: 600px
 @media (max-width: 688px)
   .hero
     &-block
@@ -109,6 +118,12 @@
       left: 5% 
     &__text
       max-width: 540px
+  .slider
+    &__background
+      height: 600px
+  .slick
+    &-dots
+      bottom: 156px
 @media (max-width: 576px)
   .slider
     &__background

@@ -1,10 +1,15 @@
 .feedback
   margin-bottom: 142px
   background: $logo
+  &-button
+    font-size: 28px
+    +bold
+    margin: -25px 0 0 -30px
+    padding: 13px 62px
 .slider
   &__foto
     margin: auto
-    margin-top: 112px
+    margin-top: 73px
     margin-bottom: 19px
   &__title
     text-align: center
@@ -17,6 +22,7 @@
     color: $feedback-slider
     font-size: 20px
     margin-bottom: 28px
+    padding: 0px 50px
   &__score
     display: flex
     justify-content: center
@@ -27,4 +33,58 @@
       color: #fefbfb
       font-size: 15px
       margin-right: 27px
-
+.my-dots-class
+  position: absolute
+  list-style-type: none
+  bottom: 33px
+  right: 47%
+  display: flex
+  li
+    margin-right: 10px
+  li button
+    font-size: 0
+    background: #fff
+    max-width: 20px
+    max-height: 20px
+    padding: 10px 10px
+@media (max-width: 1275px)
+  .feedback
+    &-button
+      margin-left: -1px
+@media (max-width: 1200px)
+  .my-dots-class
+    right: 45%
+@media (max-width: 992px)
+  .my-dots-class
+    right: 37%
+@media (max-width: 768px)
+  .my-dots-class
+    right: 33%
+  .feedback
+    &-button
+      margin: -25px 0 0 -30px
+      padding: 5px 30px
+@media (max-width: 610px)
+  .my-dots-class
+    right: 31%
+@media (max-width: 576px)
+  .my-dots-class
+    right: 29%
+@media (max-width: 476px)
+  .my-dots-class
+    right: 26%
+@media (max-width: 426px)
+  .my-dots-class
+    right: 24%
+@media (max-width: 375px)
+  .my-dots-class
+    right: 22%
+@media (max-width: 350px)
+  .my-dots-class
+    right: 20%
+@media (max-width: 320px)
+  .my-dots-class
+    right: 17%
+  .slider
+    &__text
+      padding: 0px 45px

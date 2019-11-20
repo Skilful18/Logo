@@ -1,5 +1,5 @@
 .footer
-    background: url("../../img/footer/footer-bg.jpg")
+    background: #000
     &-block
       display: flex
       justify-content: space-between
@@ -9,13 +9,15 @@
       align-items: center
       margin: 54px 0
       img
-        margin-right: 20px
+        margin-right: 13px
       span
         color: $footer-address
+        font-size: 20px
+        +reg
     &_social-network
       margin: 54px 0
       img
-        margin-right: 20px
+        margin-right: 11px
     &__line
       display: flex
       justify-content: center
@@ -33,6 +35,8 @@
           margin-right: 10px
         a
           color: $footer-info
+          font-size: 18px
+          +reg
       &-tel
         display: flex
         justify-content: center
@@ -41,3 +45,47 @@
           margin-right: 10px
         a
           color: $footer-info
+          font-size: 18px
+          +reg
+@media (max-width: 1200px)
+  .footer
+    &__info
+      display: flex
+      flex-direction: column
+      &-mail
+        margin-right: 0
+        margin-bottom: 10px
+      &-tel
+        margin-right: 0
+    &_social
+      &-network
+        display: flex
+        align-items: center
+    &__line
+      display: none
+@media (max-width: 768px)
+  .footer
+    &-block
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__address
+      margin: 24px 0
+    &_social
+      &-network
+        margin: 24px 0
+    &__info
+      margin: 24px 0
+@media (max-width: 768px)
+  .footer
+    &__address
+      span
+        font-size: 16px
+    &_social
+      &-network
+        a
+          font-size: 16px
+    &__info
+      a
+        font-size: 16px
