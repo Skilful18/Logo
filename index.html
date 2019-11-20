@@ -47,7 +47,7 @@
           <span class="navbar__contacts">
             <a href="tel:+7(863)342-22-21" class="navbar__phone">+7 (863) 342-22-21</a>
           </span>
-          <button class="button navbar__button">Заказать звонок</button>
+          <button class="button navbar__button" id="button">Заказать звонок</button>
         </div>
         <!-- /.navbar__info -->
         <!-- Начало меню Гамбургера -->
@@ -63,6 +63,24 @@
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
+
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="button modal__close" id="close">&times;</button>
+      <div class="modal-block">
+        <h1 class="modal__title">ОСТАВЬТЕ <span class="modal__title-color">ЗАЯВКУ</span></h1>
+        <form action="#" class="form modal__form" id="modal-form">
+          <div class="input-group">
+            <input type="text" name="username" class="input modal__input" placeholder="Введите Ваше имя">
+          </div>
+          <div class="input-group">
+            <input type="tel" name="phone" class="input modal__input phone" placeholder="Введите Ваш номер телефона">
+          </div>
+          <button class="button modal__button">ЗАКАЗАТЬ ЗВОНОК</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="slider">
@@ -408,6 +426,7 @@
         </div>
         <!-- /.news-cards -->
       <button class="button news-button__down button-main">ЧИТАТЬ ВСЕ НОВОСТИ</button>
+      <span class="padding"></span>
       </div>
       <!-- /.news-block -->
     </div>
@@ -426,9 +445,9 @@
         </div>
         <!-- /.footer__address -->
         <div class="footer_social-network">
-          <img src="img/footer/instagram.png" alt="instagram">
-          <img src="img/footer/vk.png" alt="vk">
-          <img src="img/footer/odnoklassniki.png" alt="odnoklassniki">
+          <a href="https://www.instagram.com/"><img src="img/footer/instagram.png" alt="instagram"></a>
+          <a href="https://vk.com/"><img src="img/footer/vk.png" alt="vk"></a>
+          <a href="https://ok.ru/"><img src="img/footer/odnoklassniki.png" alt="odnoklassniki"></a>
         </div>
         <!-- /.footer_social-network -->
         <div class="footer__info">
