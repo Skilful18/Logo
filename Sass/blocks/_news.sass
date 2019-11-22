@@ -27,6 +27,12 @@
       color: $text-color
       line-height: 28px
       max-width: 340px
+    &-bg
+      background: $main-color
+      width: 21px
+      height: 18px
+      +bold
+      margin-right: 2px
   &-button
     margin: -25px 0 64px -30px
     font-size: 28px
@@ -42,6 +48,10 @@
   .news
     &-button
       margin-left: -1px
+@media (max-width: 992px)
+  .news
+    &-button
+      font-size: 28px
 @media (max-width: 768px)
   .news
     &-cards
@@ -52,8 +62,10 @@
       p
         margin-bottom: 70px
     &-button
+      font-size: 26px
       padding: 4px 34px
       &__down
+        padding: 10px 35px
         margin-bottom: 70px
   .padding
     background: #f1f1f1

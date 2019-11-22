@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
   <nav class="navbar">
@@ -20,32 +21,32 @@
         <!-- /.navbar__logo -->
         <!-- Главное меню -->
         <div class="navbar__menu">
-          <ul class="navbar-menu">
+          <ul class="navbar-menu" id="menu">
             <li class="navbar-menu__items">
-              <span class="navbar-menu__item">Услуги</span>
+              <a href="#metka-1"><span class="navbar-menu__item">Услуги</span></a>
               <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span class="navbar-menu__item">Цены</span>
+              <a href="#metka-1"><span class="navbar-menu__item">Цены</span></a>
               <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span class="navbar-menu__item">Отзывы</span>
+              <a href="#metka-3"><span class="navbar-menu__item">Отзывы</span></a>
               <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span class="navbar-menu__item">Новости</span>
+              <a href="#metka-4"><span class="navbar-menu__item">Новости</span></a>
               <img src="img/navbar/vertical-line.png" class="navbar-menu__line" alt="vertical-line">
             </li>
             <li class="navbar-menu__items">
-              <span class="navbar-menu__item">Контакты</span>
+              <a href="#metka-5"><span class="navbar-menu__item">Контакты</span></a>
             </li>
           </ul>
         </div>
         <!-- /.navbar__menu -->
         <div class="navbar__info">
           <span class="navbar__contacts">
-            <a href="tel:+7(863)342-22-21" class="navbar__phone">+7 (863) 342-22-21</a>
+            <a href="tel:+7(863)342-22-21" class="navbar__phone">+7 (863) <span class="navbar__phone-bold">342-22-21</span></a>
           </span>
           <button class="button navbar__button" id="button">Заказать звонок</button>
         </div>
@@ -53,7 +54,7 @@
         <!-- Начало меню Гамбургера -->
         <div class="mobile-menu">
           <a href="" class="mobile-menu__btn">
-            <span></span>
+            <span class="mobile-menu__close"></span>
           </a>
         </div>
         <!-- Конец меню Гамбургера -->
@@ -64,23 +65,26 @@
   </nav>
   <!-- /.navbar -->
 
+  <!-- Модальное окно навбара -->
   <div class="modal" id="modal">
     <div class="modal-dialog">
       <button class="button modal__close" id="close">&times;</button>
       <div class="modal-block">
         <h1 class="modal__title">ОСТАВЬТЕ <span class="modal__title-color">ЗАЯВКУ</span></h1>
-        <form action="#" class="form modal__form" id="modal-form">
+        <form action="mail.php" method="POST" class="form modal__form" id="navbar-form">
           <div class="input-group">
-            <input type="text" name="username" class="input modal__input" placeholder="Введите Ваше имя">
+            <input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
           </div>
           <div class="input-group">
-            <input type="tel" name="phone" class="input modal__input phone" placeholder="Введите Ваш номер телефона">
+            <input type="tel" name="phone" class="input modal__input phone" placeholder="Ваш номер телефона">
           </div>
           <button class="button modal__button">ЗАКАЗАТЬ ЗВОНОК</button>
         </form>
       </div>
     </div>
   </div>
+  <!-- Конец модального окна навбара -->
+
 
   <section class="hero">
     <div class="slider">
@@ -118,7 +122,7 @@
               Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.
           </p>
           <!-- /.hero__text -->
-          <button class="button hero__button">ПОДРОБНЕЕ</button>
+          <button class="button hero__button" id="button">ПОДРОБНЕЕ</button>
           <!-- /.button hero__button -->
         </div>
         <!-- /.hero-block -->
@@ -130,60 +134,60 @@
 
   <section class="service">
     <div class="container">
-      <button class="button service__button button-main">Услуги</button>
+      <a name="metka-1"><button class="button service__button button-main">Услуги</button></a>
       <!-- /.button service__button -->
       <div class="service-block">
         <div class="service-block__card">
           <img src="img/service/slide-1.jpg" alt="card" class="card__background">
-          <h1 class="service-block__title">Монтаж систем 
+          <h1 class="service-block__card-title">Монтаж систем 
             отопления</h1>
           <!-- /.service-block__title -->
-          <button class="service-block__button button">УЗНАТЬ ЦЕНУ</button>
+          <button class="service-block__card-button button">УЗНАТЬ ЦЕНУ</button>
           <!-- /.service-block__button button -->
         </div>
         <!-- /.card -->
         <div class="service-block__card">
           <img src="img/service/slide-2.jpg" alt="card" class="card__background">
-          <h1 class="service-block__title">Здесь будет короткое описание
+          <h1 class="service-block__card-title">Здесь будет короткое описание
             о данной услуге</h1>
           <!-- /.service-block__title -->
-          <button class="service-block__button button">УЗНАТЬ ЦЕНУ</button>
+          <button class="service-block__card-button button">УЗНАТЬ ЦЕНУ</button>
           <!-- /.service-block__button button -->
         </div>
         <!-- /.card -->
         <div class="service-block__card">
           <img src="img/service/slide-3.jpg" alt="card" class="card__background">
-          <h1 class="service-block__title">Монтаж канализационного
+          <h1 class="service-block__card-title">Монтаж канализационного
             оборудования</h1>
           <!-- /.service-block__title -->
-          <button class="service-block__button button">УЗНАТЬ ЦЕНУ</button>
+          <button class="service-block__card-button button">УЗНАТЬ ЦЕНУ</button>
           <!-- /.service-block__button button -->
         </div>
         <!-- /.card -->
         <div class="service-block__card">
           <img src="img/service/slide-4.jpg" alt="card" class="card__background">
-          <h1 class="service-block__title">Монтаж систем 
+          <h1 class="service-block__card-title">Монтаж систем 
             отопления</h1>
           <!-- /.service-block__title -->
-          <button class="service-block__button button">УЗНАТЬ ЦЕНУ</button>
+          <button class="service-block__card-button button">УЗНАТЬ ЦЕНУ</button>
           <!-- /.service-block__button button -->
         </div>
         <!-- /.card -->
         <div class="service-block__card">
           <img src="img/service/slide-5.jpg" alt="card" class="card__background">
-          <h1 class="service-block__title">Монтаж сантехнического
+          <h1 class="service-block__card-title">Монтаж сантехнического
             оборудования</h1>
           <!-- /.service-block__title -->
-          <button class="service-block__button button">УЗНАТЬ ЦЕНУ</button>
+          <button class="service-block__card-button button">УЗНАТЬ ЦЕНУ</button>
           <!-- /.service-block__button button -->
         </div>
         <!-- /.card -->
         <div class="service-block__card">
           <img src="img/service/slide-6.jpg" alt="card" class="card__background">
-          <h1 class="service-block__title">Монтаж канализационного
+          <h1 class="service-block__card-title">Монтаж канализационного
             оборудования</h1>
           <!-- /.service-block__title -->
-          <button class="service-block__button button">УЗНАТЬ ЦЕНУ</button>
+          <button class="service-block__card-button button">УЗНАТЬ ЦЕНУ</button>
           <!-- /.service-block__button button -->
         </div>
         <!-- /.card -->
@@ -201,37 +205,37 @@
         <button class="what-button button button-main">ПОЧЕМУ МЫ?</button>
         <div class="advantages">
           <div class="advantages__list">
-            <div class="advantages__card">
+            <div class="advantages__card wow fadeInUp" data-wow-delay="0.1s">
               <!-- /.advantages__title -->
               <img src="img/what/warranty.png" alt="warrnaty">
               <h1 class="advantages__title">100 % ГАРАНТИЯ КАЧЕСТВА</h1>
             </div>
             <!-- /.advantages__card -->
-            <div class="advantages__card">
+            <div class="advantages__card wow fadeInUp" data-wow-delay="0.2s">
               <!-- /.advantages__title -->
               <img src="img/what/diagram.png" alt="diagram">
               <h1 class="advantages__title">С НАМИ ВЫГОДНО</h1>
             </div>
             <!-- /.advantages__card -->
-            <div class="advantages__card">
+            <div class="advantages__card wow fadeInUp" data-wow-delay="0.3s">
               <!-- /.advantages__title -->
               <img src="img/what/trophy.png" alt="trophy">
               <h1 class="advantages__title">БОЛЬШОЙ ОПЫТ</h1>
             </div>
             <!-- /.advantages__card -->
-            <div class="advantages__card">
+            <div class="advantages__card wow fadeInUp" data-wow-delay="0.4s">
               <!-- /.advantages__title -->
               <img src="img/what/operator.png" alt="operator">
               <h1 class="advantages__title">БЫСТРАЯ ОНЛАЙН ПОДДЕРЖКА</h1>
             </div>
             <!-- /.advantages__card -->
-            <div class="advantages__card">
+            <div class="advantages__card wow fadeInUp" data-wow-delay="0.5s">
               <!-- /.advantages__title -->
               <img src="img/what/care.png" alt="care">
               <h1 class="advantages__title">С ЗАБОТОЙ О КЛИЕНТЕ</h1>
             </div>
             <!-- /.advantages__card -->
-            <div class="advantages__card">
+            <div class="advantages__card wow fadeInUp" data-wow-delay="0.6s">
               <!-- /.advantages__title -->
               <img src="img/what/calendar.png" alt="calendar">
               <h1 class="advantages__title">ТОЧНО В СРОК</h1>
@@ -275,7 +279,7 @@
 
   <section class="feedback">
     <div class="container">
-      <button class="feedback-button button button-main">ОТЗЫВЫ</button>
+      <a name="metka-3"><button class="feedback-button button button-main">ОТЗЫВЫ</button></a>
       <div class="feedback-slider">
         <div class="slider__item">
           <img src="img/feedback/woman.png" alt="woman" class="slider__foto">
@@ -396,14 +400,14 @@
   <section class="news">
     <div class="container">
       <div class="news-block">
-        <button class="button news-button button-main">НОВОСТИ</button>
+        <a name="metka-4"><button class="button news-button button-main">НОВОСТИ</button></a>
         <!-- /.button news-button -->
         <div class="news-cards">
           <div class="news__card">
             <img src="img/news/card-1.jpg" alt="repair">
             <div class="news__card__title">
               <h1>РЕМОНТ РАКОВИНЫ</h1>
-              <span>29.11.2017</span>
+              <span><span class="news__card-bg">29 </span> 11.2017</span>
             </div>
             <p>Holisticly syndicate pandemic value and tactical process improvements. Progressively re-engineer parallel portals vis-a-vis low-risk high-yield platforms. Seamlessly reintermediate market-driven platforms rather than excellent infrastructures. Quickly deploy best-of-breed niche markets without business </p>
           </div>
@@ -411,7 +415,7 @@
             <img src="img/news/card-2.jpg" alt="repair">
             <div class="news__card__title">
               <h1>ПОДЧИНКА СЛИВА</h1>
-              <span>29.11.2017</span>
+              <span><span class="news__card-bg">29 </span> 11.2017</span>
             </div>
             <p>Holisticly syndicate pandemic value and tactical process improvements. Progressively re-engineer parallel portals vis-a-vis low-risk high-yield platforms. Seamlessly reintermediate market-driven platforms rather than excellent infrastructures. Quickly deploy best-of-breed niche markets without business </p>
           </div>
@@ -419,7 +423,7 @@
             <img src="img/news/card-3.jpg" alt="repair">
             <div class="news__card__title">
               <h1>РЕМОНТ РАКОВИНЫ</h1>
-              <span>29.11.2017</span>
+              <span><span class="news__card-bg">29 </span> 11.2017</span>
             </div>
             <p>Holisticly syndicate pandemic value and tactical process improvements. Progressively re-engineer parallel portals vis-a-vis low-risk high-yield platforms. Seamlessly reintermediate market-driven platforms rather than excellent infrastructures. Quickly deploy best-of-breed niche markets without business </p>
           </div>
@@ -434,14 +438,34 @@
   </section>
   <!-- /.news -->
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.259697993767!2d37.58076661608813!3d55.73661660070744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ba4eb217001%3A0x773684db8998fe34!2z0YPQuy4g0JvRjNCy0LAg0KLQvtC70YHRgtC-0LPQviwgNjAsINCc0L7RgdC60LLQsCwgMTE5MDIx!5e0!3m2!1sru!2sru!4v1574186988004!5m2!1sru!2sru" class="map map__form" allowfullscreen=""></iframe>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.7170936062944!2d37.95168061609055!3d55.81551169462094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414acc59c3575ba9%3A0xbee91b004e1d06f9!2z0YPQuy4g0KHQvtCy0LXRgtGB0LrQsNGPLCA0OCwg0JHQsNC70LDRiNC40YXQsCwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTQzOTAy!5e0!3m2!1sru!2sru!4v1574362875346!5m2!1sru!2sru" class="map map__form" allowfullscreen=""></iframe>
+  <!-- Модальное окно навбара -->
+  <div class="modal-map" id="modal">
+      <div class="modal-dialog">
+        <button class="button modal__close" id="close">&times;</button>
+        <div class="modal-block">
+          <h1 class="modal__title">ОСТАВЬТЕ <span class="modal__title-color">ЗАЯВКУ</span></h1>
+          <form action="mail.php" method="POST" class="form modal__form" id="navbar-form">
+            <div class="input-group">
+              <input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
+            </div>
+            <div class="input-group">
+              <input type="tel" name="phone" class="input modal__input phone" placeholder="Ваш номер телефона">
+            </div>
+            <button class="button modal__button">ЗАКАЗАТЬ ЗВОНОК</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Конец модального окна навбара -->
 
   <footer class="footer">
     <div class="container">
       <div class="footer-block">
         <div class="footer__address">
           <img src="img/footer/placeholder.png" alt="placeholder">
-          <span>г. Москва, ул. Советская 48 корп. 3</span>
+          <a name="metka-5" href="https://goo.gl/maps/UCDhykco44Zm4Qru5"><span>г. Москва, ул. Советская 48 корп. 3</span></a>
         </div>
         <!-- /.footer__address -->
         <div class="footer_social-network">
@@ -459,7 +483,7 @@
           <!-- /.footer__info-mail -->
           <div class="footer__info-tel">
             <img src="img/footer/phone-receiver.png" alt="phone">
-            <a href="+7(863)342-22-21">+7 (863) 342-22-21</a>
+            <a href="+7(863)342-22-21">+7 (863) <span class=footer__info-bold>342-22-21</span></a>
           </div>
           <!-- /.footer__info-tel -->
         </div>
@@ -471,9 +495,16 @@
   </footer>
   <!-- /.footer -->
 
+  <div class="modal-php">
+    <h1 class="modal-php__title">Благодарим Вас за заявку!</h1>
+    <p class="modal-php__text">Мы свяжемся с Вами в течение 15 минут</p>          
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/feedback-slider.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

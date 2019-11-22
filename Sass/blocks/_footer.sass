@@ -18,6 +18,8 @@
       margin: 54px 0
       img
         margin-right: 11px
+        &:hover
+          cursor: pointer
     &__line
       display: flex
       justify-content: center
@@ -47,6 +49,8 @@
           color: $footer-info
           font-size: 18px
           +reg
+      &-bold
+        +bold
 @media (max-width: 1200px)
   .footer
     &__info
@@ -63,6 +67,10 @@
         align-items: center
     &__line
       display: none
+@media (max-width: 1200px)
+  .footer
+    &:hover
+      cursor: default
 @media (max-width: 768px)
   .footer
     &-block

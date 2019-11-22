@@ -72,6 +72,8 @@
       margin-left: -1px
 @media (max-width: 1200px)
   .what
+    &-button
+      font-size: 28px
     .advantages
       &__card
         margin: 10px auto
@@ -80,6 +82,8 @@
         max-width: 310px
 @media (max-width: 992px)
   .what
+    &-button
+      font-size: 26px
     .advantages
       &__card
         margin: 2px auto
@@ -87,6 +91,19 @@
       width: 55%
 @media (max-width: 768px)
   .what
+    &::before
+      content: ""
+      width: 100%
+    &-block
+      width: 100%
+      position: relative
+      background-color: #f1f1f1
+    .virtues
+      width: 100%
+      background: #ffffff
+      position: static
+      &__point
+        margin: auto
     &-button
       padding: 4px 30px
 

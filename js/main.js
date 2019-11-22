@@ -14,8 +14,83 @@ $(document).ready(function() {
   $('.mobile-menu').on('click', function(e) {
     e.preventDefault();
     $('.mobile-menu__btn').toggleClass('mobile-menu__active'),
-    $('.navbar__menu').toggleClass('navbar__menu-active'),
-    $(".hero").toggleClass('hero-active')
+    $('.navbar__menu').toggleClass('navbar__menu-active')
+  });
+   /* Слайдер блока отзывы */
+   $('.feedback-slider').slick({
+    dots:true,
+    infinite:true,
+    speed:300,
+    slidesToShow:2,
+    slidesToScroll:2,
+    adaptiveHeight:true,
+    arrows:false,
+    dotsClass: 'my-dots-class',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 410,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '30px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '20px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '15px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '5px',
+          slidesToShow: 1
+        }
+      }
+    ]
   });
   /* Модальные окна */
   var button = $('#button');
@@ -28,4 +103,66 @@ $(document).ready(function() {
   close.on('click', function() {
     modal.removeClass('modal_active');
   });
+  $("#navbar-form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      phone: {
+        required: true
+      }
+    },
+      errorElement: "em",
+      errorClass: "navbar-invalid",
+      messages: {
+        username: {
+          required: "Заполните поле",
+          minlength: jQuery.validator.format("Введите еще {0} символов")
+        },
+        phone: {
+          required: "Укажите телефон",
+          phone: "Заполните поле"
+        } 
+      },
+      /* Отправка формы */
+      submitHandler:function name(event) {
+        event.preventDefault();
+        $.ajax({
+          type:"POST",
+          url:"mail.php",
+          data:$('#navbar-form').serialize(),
+          success:function(response) {
+            $('.modal-php').show(500);
+            $('form :input').val('');
+            setTimeout(function() {
+              $('.modal-php').hide();
+            },2000)
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            console.error(jqXHR + " " + textStatus)
+          }
+        });
+      }
+  });
+  /* Маска для телефона */
+  $(".phone").mask("+7 (999) 999-99-99");
+  /* Плавный переход для якорных ссылок */
+  $('a[href*="#"]').on('click.smoothscroll', function( e ){
+    var hash    = this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
+    if( theHref && location.href.replace(/#.*/,'') != theHref ) return;
+    var $target = _hash === '' ? $('body') : $( hash + ', a[name="'+ _hash +'"]').first();
+    if( ! $target.length ) return;
+    e.preventDefault();
+    $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 400, 'swing', function(){
+    window.location.hash = hash;
+    });
+    });
+    /* Инициализация WOW.js */
+    new WOW().init();
+    $('.navbar-menu__item').on('click', function(){
+      $('.navbar__menu').removeClass('navbar__menu-active'),
+      $('.mobile-menu__btn').removeClass('mobile-menu__active')
+    });
 });

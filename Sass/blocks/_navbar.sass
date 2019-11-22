@@ -27,10 +27,16 @@
       +bold
     &__item
       margin-right: 20px
+      position: relative
+      color: $secondary
+      &:hover
+        cursor: pointer
+        color: $main-color
+        border-bottom: 2px solid $main-color
     &__line
       margin-right: 20px
   &__info
-    background: url("../../img/navbar/navbar_phone.png") no-repeat
+    background: $main-bg no-repeat
     display: flex
     justify-content: center
     align-items: center
@@ -43,6 +49,9 @@
   &__phone
     color: $secondary
     font-size: 18px
+    +reg
+    &-bold
+      +bold
   &__button
     margin-left: 30px
     padding: 6px 15px
@@ -64,7 +73,7 @@
       &__line
         margin-right: 5px
       &__item
-        margin-right: 5px
+        margin-right: 5px       
     &__phone
       display: flex
       justify-content: center
@@ -76,6 +85,9 @@
       min-width: 130px
 @media (max-width: 992px)
   .navbar
+    &:hover
+      box-shadow: none
+      cursor: default
     &__contacts
       display: none
     &__button
@@ -96,6 +108,9 @@
       display: block
       margin: auto
       z-index: 2
+      position: absolute
+      top: 13px
+      right: 25px
       &__btn
         display: block
         width: 40px
@@ -164,4 +179,7 @@
         font-size: 20px
     &__logo
       margin-right: 20px
+    &-block
+      display: flex
+      justify-content: space-around
         

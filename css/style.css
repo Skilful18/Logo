@@ -78,6 +78,18 @@ button {
   font-size: 16px;
 }
 
+input {
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+.slick-slide {
+  outline: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 900px;
@@ -163,6 +175,14 @@ button {
 
 .navbar-menu__item {
   margin-right: 20px;
+  position: relative;
+  color: #000000;
+}
+
+.navbar-menu__item:hover {
+  cursor: pointer;
+  color: #ffc800;
+  border-bottom: 2px solid #ffc800;
 }
 
 .navbar-menu__line {
@@ -170,7 +190,7 @@ button {
 }
 
 .navbar__info {
-  background: url("../../img/navbar/navbar_phone.png") no-repeat;
+  background: #f1f1f1 no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,6 +221,13 @@ button {
 .navbar__phone {
   color: #000000;
   font-size: 18px;
+  font-family: 'Proxima Nova Regular',sans-serif;
+  font-weight: 400;
+}
+
+.navbar__phone-bold {
+  font-family: 'Proxima Nova Semibold',sans-serif;
+  font-weight: 700;
 }
 
 .navbar__button {
@@ -259,6 +286,11 @@ button {
 }
 
 @media (max-width: 992px) {
+  .navbar:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: default;
+  }
   .navbar__contacts {
     display: none;
   }
@@ -287,6 +319,9 @@ button {
     display: block;
     margin: auto;
     z-index: 2;
+    position: absolute;
+    top: 13px;
+    right: 25px;
   }
   .mobile-menu__btn {
     display: block;
@@ -378,6 +413,13 @@ button {
   .navbar__logo {
     margin-right: 20px;
   }
+  .navbar-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 /* Подключение модального окна */
@@ -412,6 +454,7 @@ button {
   position: absolute;
   top: 0;
   right: 0;
+  padding: 5px 10px;
 }
 
 .modal__title {
@@ -443,6 +486,7 @@ button {
 .modal__button {
   margin: 47px 60px;
   font-size: 20px;
+  padding: 15px 30px;
 }
 
 .modal__form {
@@ -456,7 +500,42 @@ button {
 }
 
 .modal .input-group {
+  position: relative;
   margin: 0 auto;
+}
+
+em.navbar-invalid {
+  color: red;
+  position: absolute;
+  top: 2px;
+  left: 49px;
+}
+
+.modal-php {
+  width: 600px;
+  height: 120px;
+  position: fixed;
+  z-index: 9999;
+  display: none;
+  background: #ffc800;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -75px;
+}
+
+.modal-php__title {
+  font-size: 22px;
+  text-align: center;
+  font-family: 'Proxima Nova Semibold',sans-serif;
+  font-weight: 700;
+}
+
+.modal-php__text {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Proxima Nova Regular',sans-serif;
+  font-weight: 400;
 }
 
 /* Подключение главную секцию */
@@ -520,6 +599,10 @@ button {
   max-width: 20px;
   max-height: 20px;
   padding: 10px 10px;
+}
+
+.slider .slick-active button {
+  background-color: #ffc800;
 }
 
 .slider__shadow {
@@ -642,9 +725,6 @@ button {
     width: 1920px;
     height: 550px;
   }
-  .hero-active {
-    display: none;
-  }
   .hero-block {
     top: 150px;
   }
@@ -755,11 +835,7 @@ button {
   margin-bottom: 21px;
 }
 
-.service-block__card:last-child {
-  margin-bottom: 120px;
-}
-
-.service-block__title {
+.service-block__card-title {
   position: absolute;
   right: 0;
   bottom: 10px;
@@ -768,13 +844,18 @@ button {
   left: 56%;
   margin-left: -140px;
   margin-top: -40px;
-  color: #fcfafa;
   font-family: 'Proxima Nova Regular',sans-serif;
   font-weight: 400;
   line-height: 28px;
+  color: #fcfafa;
 }
 
-.service-block__button {
+.service-block__card-title:hover {
+  display: none;
+  color: #000000;
+}
+
+.service-block__card-button {
   position: absolute;
   right: 0;
   top: 48%;
@@ -784,11 +865,25 @@ button {
   color: #020202;
 }
 
+.service-block__card-button:hover {
+  background-color: #000000;
+  color: #fdfcfc;
+}
+
+.service-block__card:last-child {
+  margin-bottom: 120px;
+}
+
 .service__button {
   margin: -25px 0 80px -30px;
   font-size: 35px;
   font-family: 'Proxima Nova Semibold',sans-serif;
   font-weight: 700;
+}
+
+.service .card__background:hover {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 @media (max-width: 1275px) {
@@ -804,6 +899,18 @@ button {
     width: 350px;
     height: 236px;
     margin: 0 auto;
+  }
+  .service__button {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .service:hover {
+    cursor: default;
+  }
+  __button {
+    font-size: 30px;
   }
 }
 
@@ -939,6 +1046,9 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .what-button {
+    font-size: 28px;
+  }
   .what .advantages__card {
     margin: 10px auto;
   }
@@ -948,6 +1058,9 @@ button {
 }
 
 @media (max-width: 992px) {
+  .what-button {
+    font-size: 26px;
+  }
   .what .advantages__card {
     margin: 2px auto;
   }
@@ -957,6 +1070,23 @@ button {
 }
 
 @media (max-width: 768px) {
+  .what::before {
+    content: "";
+    width: 100%;
+  }
+  .what-block {
+    width: 100%;
+    position: relative;
+    background-color: #f1f1f1;
+  }
+  .what .virtues {
+    width: 100%;
+    background: #ffffff;
+    position: static;
+  }
+  .what .virtues__point {
+    margin: auto;
+  }
   .what-button {
     padding: 4px 30px;
   }
@@ -1013,10 +1143,18 @@ button {
   margin-right: 7px;
 }
 
+.slider__score img:hover {
+  cursor: pointer;
+}
+
 .slider__score span {
   color: #fefbfb;
   font-size: 15px;
   margin-right: 27px;
+}
+
+.slider__score span:hover {
+  cursor: pointer;
 }
 
 .my-dots-class {
@@ -1041,6 +1179,10 @@ button {
   padding: 10px 10px;
 }
 
+.my-dots-class .slick-active button {
+  background-color: #ffc800;
+}
+
 @media (max-width: 1275px) {
   .feedback-button {
     margin-left: -1px;
@@ -1057,6 +1199,9 @@ button {
   .my-dots-class {
     right: 37%;
   }
+  .feedback-button {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1064,6 +1209,7 @@ button {
     right: 33%;
   }
   .feedback-button {
+    font-size: 26px;
     margin: -25px 0 0 -1px;
     padding: 5px 30px;
   }
@@ -1177,6 +1323,15 @@ button {
   max-width: 340px;
 }
 
+.news__card-bg {
+  background: #ffc800;
+  width: 21px;
+  height: 18px;
+  font-family: 'Proxima Nova Semibold',sans-serif;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
 .news-button {
   margin: -25px 0 64px -30px;
   font-size: 28px;
@@ -1202,6 +1357,12 @@ button {
   }
 }
 
+@media (max-width: 992px) {
+  .news-button {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 768px) {
   .news-cards {
     display: -webkit-box;
@@ -1217,9 +1378,11 @@ button {
     margin-bottom: 70px;
   }
   .news-button {
+    font-size: 26px;
     padding: 4px 34px;
   }
   .news-button__down {
+    padding: 10px 35px;
     margin-bottom: 70px;
   }
   .padding {
@@ -1273,6 +1436,10 @@ button {
 
 .footer_social-network img {
   margin-right: 11px;
+}
+
+.footer_social-network img:hover {
+  cursor: pointer;
 }
 
 .footer__line {
@@ -1342,6 +1509,11 @@ button {
   font-weight: 400;
 }
 
+.footer__info-bold {
+  font-family: 'Proxima Nova Semibold',sans-serif;
+  font-weight: 700;
+}
+
 @media (max-width: 1200px) {
   .footer__info {
     display: -webkit-box;
@@ -1369,6 +1541,12 @@ button {
   }
   .footer__line {
     display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer:hover {
+    cursor: default;
   }
 }
 
@@ -1415,5 +1593,6 @@ button {
 .map {
   width: 100%;
   height: 662px;
+  border: 0;
 }
 /*# sourceMappingURL=style.css.map */
