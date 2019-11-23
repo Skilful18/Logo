@@ -25,6 +25,8 @@
     font-size: 18px
     color: $text-color
     padding: 12px 38px
+    &:hover
+      cursor: pointer
 .slick
   &-dots
     position: absolute
@@ -32,6 +34,10 @@
     bottom: 156px
     right: 47%
     display: flex
+    li
+      button
+        &:hover
+          cursor: pointer
   &-dots li
     margin-right: 10px
   &-dots li button
@@ -47,6 +53,7 @@
     background: #000
     margin-bottom: 133px
   &__background
+    object-fit: cover
     width: 100%
     height: 740px
     overflow: hidden
@@ -77,6 +84,25 @@
     &-block
       left: 13%
       max-width: 740px
+    &__title
+      font-size: 28px
+    &__subtitle
+      font-size: 28px
+    &__text
+      font-size: 16px
+    &__button
+      font-size: 16px
+      padding: 10px 34px
+      &:hover
+        box-shadow: none
+        cursor: default
+    .slick
+      &-dots
+        li
+          button
+            &:hover
+              box-shadow: none
+              cursor: default
 @media (max-width: 912px)
   .hero
     &-block
@@ -95,21 +121,9 @@
       left: 10% 
       top: 23% 
       max-width: 580px
-    &__title
-      font-size: 28px
-    &__subtitle
-      font-size: 28px
-    &__text
-      font-size: 16px
-    &__button
-      font-size: 16px
-      padding: 10px 34px
   .slick
     &-dots
       bottom: 200px
-  .slider
-    &__background
-      height: 600px
 @media (max-width: 688px)
   .hero
     &-block
@@ -120,12 +134,9 @@
       left: 5% 
     &__text
       max-width: 540px
-  .slider
-    &__background
-      height: 600px
   .slick
     &-dots
-      bottom: 156px
+      bottom: 200px
 @media (max-width: 576px)
   .slider
     &__background
@@ -134,11 +145,7 @@
   .hero
     &-block
       top: 150px
-  .slick
-    &-dots
-      left: 170px
-@media (max-width: 500px)
-  .hero
+      max-width: 450px
     &__title
       font-size: 24px
     &__subtitle
@@ -149,11 +156,23 @@
       padding: 7px 26px
   .slick
     &-dots
+      left: 170px
+@media (max-width: 526px)
+  .slick
+    &-dots
+      left: 155px
+@media (max-width: 500px)
+  .slick
+    &-dots
       left: 150px
+  .hero
+    &-block
+      max-width: 350px
 @media (max-width: 450px)
   .slick
     &-dots
       left: 140px
+      bottom: 164px
 @media (max-width: 440px)
   .slick
     &-dots
@@ -170,10 +189,16 @@
   .slick
     &-dots
       left: 100px
+  .hero
+    &__text
+      margin-bottom: 15px
 @media (max-width: 385px)
   .slick
     &-dots
       left: 100px
+  .hero
+    &-block
+      max-width: 300px
 @media (max-width: 365px)
   .slick
     &-dots

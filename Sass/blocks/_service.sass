@@ -1,5 +1,5 @@
 .service
-  background: url('../../img/service/service_background.jpg') repeat
+  background: $main-bg
   margin-bottom: 143px
   &-block
     display: flex
@@ -7,11 +7,14 @@
     &__card 
       position: relative
       display: inline-block
-      /* Style for "fff67d6f52" */
       width: 377px
       height: 236px
       margin-right: 19px
       margin-bottom: 21px
+      /* -webkit-filter: grayscale(1) */
+      transition: 0.2s
+      &:hover
+        /* -webkit-filter: grayscale(0) */
       &-title
         position: absolute
         right: 0
@@ -23,10 +26,8 @@
         margin-top: -40px
         +reg
         line-height: 28px
-        color: $service-text
-        &:hover
-          display: none
-          color: $secondary
+        color: $footer-address
+        max-width: 250px
       &-button
         position: absolute
         right: 0
@@ -34,20 +35,41 @@
         left: 53%
         margin-left: -77px
         margin-top: 19px
-        color: $text-color
+        color: $secondary
+        +bold
         &:hover
-          background-color: $secondary
-          color: $footer-address
+          cursor: pointer
       &:last-child
         margin-bottom: 120px
   &__button
     margin: -25px 0 80px -30px
     font-size: 35px
     +bold
-  .card
-    &__background
-      &:hover
-        filter: blur(5px)
+.card__background 
+  opacity: 0.3
+.service__shadow
+  background: #000
+  display: block
+  max-height: 236px
+.service .card__background 
+  width: 377px
+  height: 236px
+  transition: 0.2s
+/* .service-block__card-active .service-block__card-button
+  color: $secondary */
+.service-block__card-active
+  h2
+    color: $secondary
+  button
+    left: 56%
+    color: $footer-address
+    background: $secondary
+  img
+    opacity: 1
+  div
+    max-height: 236px
+    
+  filter: grayscale(0)
 @media (max-width: 1275px)
   .service
     &__button
@@ -61,6 +83,7 @@
         width: 350px
         height: 236px
         margin: 0 auto
+        margin-bottom: 20px
     &__button
       font-size: 32px
 @media (max-width: 992px)

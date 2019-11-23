@@ -1,8 +1,13 @@
 .navbar
   &::before
     content: ""
-    width: 60%
-    height: 100%
+    width: 25%
+    background: #f1f1f1
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    height: 80px
   &-block
     display: flex
     justify-content: space-between
@@ -18,6 +23,7 @@
     justify-content: center
     align-items: center
     color: $secondary
+    margin-right: 100px
   &-menu
     display: flex
     list-style-type: none
@@ -38,6 +44,7 @@
   &__info
     background: $main-bg no-repeat
     display: flex
+    flex-grow: 1
     justify-content: center
     align-items: center
     flex-basis: 37%
@@ -55,20 +62,42 @@
   &__button
     margin-left: 30px
     padding: 6px 15px
+    &:hover
+      cursor: pointer
 .mobile-menu
   display: none
+@media (max-width: 2000px)
+  .navbar
+    &::before
+      content: ""
+      width: 20%
+@media (max-width: 1700px)
+  .navbar
+    &::before
+      content: ""
+      width: 15%
 @media (max-width: 1440px)
   .navbar
+    &::before
+      content: ""
+      width: 10%
     &-block
       display: flex
 @media (max-width: 1300px)
   .navbar
+    &::before
+      content: ""
+      width: 5%
     &-block
       justify-content: center
 @media (max-width: 1200px)
   .navbar
+    &::before
+      content: ""
+      width: 20%
     &__menu
       margin: auto
+      margin-right: 20px
     &-menu
       &__line
         margin-right: 5px
@@ -83,25 +112,130 @@
       margin: auto 5px
     &__contacts
       min-width: 130px
+@media (max-width: 1160px)
+  .navbar
+    &::before
+      content: ""
+      width: 18.5%
+@media (max-width: 1140px)
+  .navbar
+    &::before
+      content: ""
+      width: 18%
+@media (max-width: 1130px)
+  .navbar
+    &::before
+      content: ""
+      width: 17.6%
+@media (max-width: 1120px)
+  .navbar
+    &::before
+      content: ""
+      width: 17%
+@media (max-width: 1107px)
+  .navbar
+    &::before
+      content: ""
+      width: 17%
+@media (max-width: 1095px)
+  .navbar
+    &::before
+      content: ""
+      width: 16.5%
+@media (max-width: 1080px)
+  .navbar
+    &::before
+      content: ""
+      width: 16.1%
+@media (max-width: 1065px)
+  .navbar
+    &::before
+      content: ""
+      width: 15.7%
+@media (max-width: 1050px)
+  .navbar
+    &::before
+      content: ""
+      width: 15.2%
+@media (max-width: 1040px)
+  .navbar
+    &::before
+      content: ""
+      width: 14.8%
+@media (max-width: 1027px)
+  .navbar
+    &::before
+      content: ""
+      width: 14.4%
+@media (max-width: 1013px)
+  .navbar
+    &::before
+      content: ""
+      width: 13.9%
+@media (max-width: 1000px)
+  .navbar
+    &::before
+      content: ""
+      width: 13.4%
 @media (max-width: 992px)
   .navbar
     &:hover
       box-shadow: none
       cursor: default
+    &::before
+      content: ""
+      width: 13%
     &__contacts
       display: none
     &__button
       margin: 0
+@media (max-width: 840px)
+  .navbar
+    &::before
+      content: ""
+      width: 6%
 @media (max-width: 768px)
   .navbar
+    &::before
+      content: ""
+      width: 12.2%
     &-menu
       margin-left: -20px
       &__line
         display: none
-@media (max-width: 600px)
+@media (max-width: 730px)
+  .navbar
+    &::before
+      content: ""
+      width: 10.3%
+@media (max-width: 692px)
+  .navbar
+    &::before
+      content: ""
+      width: 8.1%
+@media (max-width: 657px)
+  .navbar
+    &::before
+      content: ""
+      width: 5.8%
+@media (max-width: 617px)
+  .navbar
+    &::before
+      content: ""
+      width: 5%
+@media (max-width: 605px)
+  .navbar
+    &::before
+      content: ""
+      width: 5%
   .navbar
     &__button
       padding: 4px 10px
+@media (max-width: 590px)
+  .navbar
+    &::before
+      content: ""
+      width: 4.8%
 @media (max-width: 576px)
   .mobile
     &-menu
@@ -158,6 +292,9 @@
             transform-origin: right bottom
             transform-origin: 65% -40%      
   .navbar
+    &::before
+      content: ""
+      width: 0%
     &__menu
       visibility: hidden
       opacity: 0
@@ -170,6 +307,8 @@
         opacity: 1
         transition: all 0.4s linear
         z-index: 2
+    &__info
+      margin-right: 65px
     &-menu
       display: block
       &__items
@@ -182,4 +321,8 @@
     &-block
       display: flex
       justify-content: space-around
+@media (max-width: 400px)
+  .navbar
+    &__info
+      margin-right: 70px
         

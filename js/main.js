@@ -126,25 +126,7 @@ $(document).ready(function() {
           phone: "Заполните поле"
         } 
       },
-      /* Отправка формы */
-      submitHandler:function name(event) {
-        event.preventDefault();
-        $.ajax({
-          type:"POST",
-          url:"mail.php",
-          data:$('#navbar-form').serialize(),
-          success:function(response) {
-            $('.modal-php').show(500);
-            $('form :input').val('');
-            setTimeout(function() {
-              $('.modal-php').hide();
-            },2000)
-          },
-          error: function(jqXHR, textStatus, errorThrown) {
-            console.error(jqXHR + " " + textStatus)
-          }
-        });
-      }
+      
   });
   /* Маска для телефона */
   $(".phone").mask("+7 (999) 999-99-99");
@@ -161,8 +143,43 @@ $(document).ready(function() {
     });
     /* Инициализация WOW.js */
     new WOW().init();
+    /* Закрытие гамбургер меню при нажатии на пункт меню */
     $('.navbar-menu__item').on('click', function(){
       $('.navbar__menu').removeClass('navbar__menu-active'),
       $('.mobile-menu__btn').removeClass('mobile-menu__active')
     });
+    $("#modal-map").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        phone: {
+          required: true
+        }
+      },
+        errorElement: "em",
+        errorClass: "map-invalid",
+        messages: {
+          username: {
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Введите еще {0} символов")
+          },
+          phone: {
+            required: "Укажите телефон",
+            phone: "Заполните поле"
+          } 
+        },
+        
+    });
+});
+/* Скрипт позволяющий карточкам менять текст на цену */
+const items = document.querySelectorAll('.service-block__card');
+
+[...items].forEach(item => {
+  item.querySelector('.service-block__card-button').addEventListener('click', (e) => {
+   item.classList.toggle('service-block__card-active');
+    e.target.innerText = item.classList.contains('service-block__card-active') ? '300 руб' : 'Узнать цену';
+  });
 });

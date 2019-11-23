@@ -38,9 +38,13 @@
       flex-direction: column
       &:last-child
         margin-bottom: 95px
+      img
+        margin-bottom: 15px
     &__title
       font-size: 18px
       text-align: center
+      color: $text-color
+      +reg
   .virtues
     width: 43%
     height: 100%
@@ -54,18 +58,39 @@
       line-height: 25px
       max-width: 410px
       margin-right: 10px
+      &-2
+        display: flex
+        align-items: center
+        margin-bottom: 16px
+        line-height: 25px
+        max-width: 410px
+        margin-right: 10px
     &__number
       font-size: 35px
       color: $main-color
       margin-right: 10px
-      +bold
+      +black
       font-weight: 900
+      width: 20px
+      height: 20px
+      &::before
+        content: ""
+        font-weight: bold
     img
       margin-right: 10px
     &__title
       font-size: 20px
       +bold
       color: $text-color
+      &-2
+        font-size: 20px
+        +bold
+        color: $text-color
+        display: block
+        &::before
+          content: ""
+          display: block
+          padding-top: 24px
 @media (max-width: 1275px)
   .what
     &-button
@@ -104,6 +129,19 @@
       position: static
       &__point
         margin: auto
+        max-width: 479px
+        &-2
+          margin: auto
+          max-width: 479px
+      &__title
+        &-2
+          &::before
+            padding: 0
     &-button
       padding: 4px 30px
+@media (max-width: 576px)
+  .what
+    .advantages
+      &__card
+        margin-bottom: 10px
 

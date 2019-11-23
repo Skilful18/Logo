@@ -18,6 +18,16 @@
   font-style: normal;
   }
 
+@font-face {
+font-family: 'Proxima Nova Black';
+src: url('../fonts/ProximaNova-Black.eot');
+src: url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+url('../fonts/ProximaNova-Black.woff') format('woff'),
+url('../fonts/ProximaNova-Black.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
 @mixin reg {
   font-family: 'Proxima Nova Regular',sans-serif;
   font-weight: 400;
@@ -25,4 +35,9 @@
 @mixin bold {
   font-family: 'Proxima Nova Semibold',sans-serif;
   font-weight: 700;
+}
+
+@mixin black {
+  font-family: 'Proxima Nova Black',sans-serif;
+  font-weight: 900;
 }

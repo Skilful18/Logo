@@ -13,11 +13,13 @@
     &__title
       display: flex
       align-items: center
-    h1
+    h2
       +bold
       font-size: 20px
       color: $text-color
       margin-right: 60px
+      &:hover
+        cursor: pointer
     span
       display: flex
       justify-content: flex-end
@@ -27,6 +29,8 @@
       color: $text-color
       line-height: 28px
       max-width: 340px
+      &:hover
+        cursor: pointer
     &-bg
       background: $main-color
       width: 21px
@@ -44,6 +48,8 @@
       margin: auto
       +reg
       padding: 15px 46px
+      &:hover
+        cursor: pointer
 @media (max-width: 1275px)
   .news
     &-button
@@ -52,6 +58,15 @@
   .news
     &-button
       font-size: 28px
+      &__down
+        &:hover
+          box-shadow: none
+          cursor: default
+    &__card
+      &__title
+        &:hover
+          box-shadow: none
+          cursor: default
 @media (max-width: 768px)
   .news
     &-cards
