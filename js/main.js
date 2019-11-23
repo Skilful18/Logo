@@ -6,7 +6,7 @@ $(document).ready(function() {
     speed: 300,
     slidesToShow: 1,
     adaptiveHeight: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 1000,
     arrows: false
   });
@@ -172,6 +172,37 @@ $(document).ready(function() {
           } 
         },
         
+    });
+    /* Скрипт для hover эффектов в секции новости */
+    $('.hover').hover( function() {
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        $('.hover').addClass('hover-id');
+      } else {
+        $('.hover').removeClass('hover-id')
+      }
+      $('.hover').mouseleave(function() {
+        $('.hover').removeClass('hover-id')
+      });
+    });
+    $('.nover').hover( function() {
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        $('.nover').addClass('hover-id');
+      } else {
+        $('.nover').removeClass('hover-id')
+      }
+      $('.nover').mouseleave(function() {
+        $('.nover').removeClass('hover-id')
+      });
+    });
+    $('.cover').hover( function() {
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        $('.cover').addClass('hover-id');
+      } else {
+        $('.cover').removeClass('hover-id')
+      }
+      $('.cover').mouseleave(function() {
+        $('.cover').removeClass('hover-id')
+      });
     });
 });
 /* Скрипт позволяющий карточкам менять текст на цену */

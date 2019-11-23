@@ -18,8 +18,6 @@
       font-size: 20px
       color: $text-color
       margin-right: 60px
-      &:hover
-        cursor: pointer
     span
       display: flex
       justify-content: flex-end
@@ -29,14 +27,16 @@
       color: $text-color
       line-height: 28px
       max-width: 340px
-      &:hover
-        cursor: pointer
     &-bg
       background: $main-color
       width: 21px
       height: 18px
       +bold
       margin-right: 2px
+      &:hover
+        box-shadow: none
+        cursor: default
+        text-decoration: none
   &-button
     margin: -25px 0 64px -30px
     font-size: 28px
@@ -50,6 +50,9 @@
       padding: 15px 46px
       &:hover
         cursor: pointer
+  .hover-id
+    cursor: pointer
+    text-decoration: underline
 @media (max-width: 1275px)
   .news
     &-button
@@ -67,6 +70,10 @@
         &:hover
           box-shadow: none
           cursor: default
+  .hover .cover .nover
+    &:hover
+      box-shadow: none
+      cursor: default
 @media (max-width: 768px)
   .news
     &-cards
