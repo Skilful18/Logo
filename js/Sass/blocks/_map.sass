@@ -1,0 +1,190 @@
+.map
+  width: 100%
+  height: 662px
+  border: 0
+  &-block
+    min-height: 662px
+  &-form
+    max-height: 662px
+.modal-map
+  position: relative
+  left: 350px
+  top: -520px
+  width: 100%
+  height: 100%
+  display: block
+  z-index: 2
+.modal
+  &-window
+    position: absolute
+    margin: auto
+    max-width: 405px
+    width: 90%
+    min-width: 200px
+    min-height: 390px
+    background-color: #ffffff
+    box-shadow: 3px -3px 15px 2px rgba(0, 0, 0, 0.5)
+  &__title
+    &-2
+      display: block
+      text-align: center
+      margin: 0
+      padding: 40px 0
+      font-size: 20px
+      color: $text-color
+      line-height: 1.45
+      +bold
+    &-color
+      color: $main-color
+  &__input
+    &-2
+      position: relative
+      padding: 1px 50px
+      border-top: none
+      border-left: none
+      border-right: none
+      font-size: 18px
+      +reg
+      font-family: serif
+      margin-top: -12px
+    &-3
+      padding: 20px 50px
+      border-top: none
+      border-left: none
+      border-right: none
+      font-size: 18px
+      +reg
+      margin-bottom: 10px
+  &__button
+    margin: 40px 60px
+    font-size: 20px
+    padding: 15px 50px
+  &__form-2
+    margin: auto
+  &__input
+    position: relative
+    margin: 0 auto
+em.map-invalid
+  color: red
+  position: absolute
+  top: 1px
+  left: 98px
+@media (max-width: 1800px)
+  .modal-map
+    left: 300px
+@media (max-width: 1720px)
+  .modal-map
+    left: 250px
+@media (max-width: 1620px)
+  .modal-map
+    left: 200px
+@media (max-width: 1520px)
+  .modal-map
+    left: 150px
+@media (max-width: 1420px)
+  .modal-map
+    left: 100px
+@media (max-width: 1320px)
+  .modal-map
+    left: 50px
+@media (max-width: 1050px)
+  .modal-map
+    left: 10px
+@media (max-width: 1200px)
+  em.map-invalid
+    color: red
+    position: absolute
+    top: 1px
+    left: 98px
+@media (max-width: 992px)
+  .modal-map
+    left: 10px
+  .modal
+    &-window
+      max-width: 350px
+      width: 70%
+      min-width: 200px
+      min-height: 340px
+    &__input
+      &-2
+        position: relative
+        padding: 1px 50px
+        border-top: none
+        border-left: none
+        border-right: none
+        font-size: 18px
+        +reg
+        font-family: serif
+        margin-top: -12px
+      &-3
+        padding: 20px 30px
+        font-size: 18px
+        margin-top: -12px
+        margin-bottom: 25px
+    &__button
+      margin: 0 60px
+      font-size: 18px
+      padding: 12px 30px
+  em.map-invalid
+    color: red
+    position: absolute
+    top: -10px
+    left: 79px
+@media (max-width: 768px)
+  .map
+    width: 100%
+    height: 900px
+    border: 0
+  .modal-map
+    position: relative
+    left: 8px
+    top: -894px
+    width: 100%
+    height: 100%
+    display: block
+    z-index: 2
+@media (max-width: 576px)
+  .modal-map
+    left: 10px
+  .modal
+    &-window
+      max-width: 300px
+      width: 70%
+      min-width: 200px
+      min-height: 300px
+    &__title
+      &-2
+        font-size: 18px
+    &__input
+      &-3
+        border-top: none
+        border-right: none
+        border-left: none
+        padding: 1px 20px
+        font-size: 18px
+        margin-top: -12px
+        margin-bottom: 15px
+    &__button
+      margin: 0 60px
+      font-size: 16px
+      padding: 10px 10px
+@media (max-width: 576px)
+  .modal
+    &-window
+      max-width: 300px
+      width: 70%
+      min-width: 260px
+      min-height: 300px
+    &__input
+      &-2
+        padding: 0px 10px
+      &-3
+        padding: 1px 10px
+        margin: 15px
+    &__button
+      margin: 10px 60px
+  em.map-invalid
+    color: red
+    position: absolute
+    top: -2px
+    left: 33px

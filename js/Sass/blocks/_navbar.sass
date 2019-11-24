@@ -182,9 +182,6 @@
     &:hover
       box-shadow: none
       cursor: default
-      background: none
-      border: none
-      color: $secondary
     &::before
       content: ""
       width: 13%
@@ -193,30 +190,9 @@
     &__button
       margin: 0
     &-menu
-      &__item
-        &:hover
-          cursor: default !important
-          box-shadow: none
-          background: none
-          border: none
-          color: $secondary
-      &s
-        a
-          &:hover
-            cursor: default !important
-            box-shadow: none
-            background: none
-            border: none
-            color: $secondary
-.navbar-menu__items
-  a
-    &:hover
-      cursor: default !important
-      box-shadow: none
-      background: none
-      border: none
-      color: $secondary
-    
+.navbar-menu__item
+  &:hover
+    cursor: default
 @media (max-width: 840px)
   .navbar
     &::before
@@ -304,13 +280,9 @@
       display: block
       &__items
         margin-bottom: 20px
-        &:hover
-          color: $hero-text
       &__item
         color: $hero-text
         font-size: 20px
-        &:hover
-          color: $hero-text
     &__logo
       margin-right: 20px
     &-block

@@ -13,28 +13,27 @@
       margin-bottom: 21px
       /* -webkit-filter: grayscale(1) */
       transition: 0.2s
-      .card__title
+      &:hover
+        /* -webkit-filter: grayscale(0) */
+      &-title
         position: absolute
         right: 0
         bottom: 10px
         font-size: 20px
         top: 42%
         left: 56%
-        margin-left: -148px
+        margin-left: -140px
         margin-top: -40px
         +reg
         line-height: 28px
         color: $footer-address
         max-width: 250px
-        text-align: center
-      &:hover .card__background
-        opacity: 1
       &-button
         position: absolute
         right: 0
         top: 48%
         left: 53%
-        margin-left: -79px
+        margin-left: -77px
         margin-top: 19px
         color: $secondary
         +bold
@@ -58,10 +57,8 @@
   transition: 0.2s
 /* .service-block__card-active .service-block__card-button
   color: $secondary */
-.title-active
-  color: $secondary
 .service-block__card-active
-  .card__title
+  h2
     color: $secondary
   button
     left: 56%
@@ -71,6 +68,8 @@
     opacity: 1
   div
     max-height: 236px
+    
+  filter: grayscale(0)
 @media (max-width: 1275px)
   .service
     &__button
@@ -91,13 +90,8 @@
   .service
     &:hover
       cursor: default
-      box-shadow: none
   &__button
       font-size: 30px
-  .card__background 
-    opacity: 0.3
-    &:hover
-      opacity: 0.3
 @media (max-width: 768px)
   .service
     &__button

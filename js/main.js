@@ -204,6 +204,42 @@ $(document).ready(function() {
         $('.cover').removeClass('hover-id')
       });
     });
+    $('.service__card-1').mouseenter( function() {
+      $('.card__title-1').css('color','#000')
+    });
+    $('.service__card-1').mouseleave(function() {
+      $('.card__title-1').css('color','#f1f1f1')
+    });
+    $('.service__card-2').mouseenter( function() {
+      $('.card__title-2').css('color','#000')
+    });
+    $('.service__card-2').mouseleave(function() {
+      $('.card__title-2').css('color','#f1f1f1')
+    });
+    $('.service__card-3').mouseenter( function() {
+      $('.card__title-3').css('color','#000')
+    });
+    $('.service__card-3').mouseleave(function() {
+      $('.card__title-3').css('color','#f1f1f1')
+    });
+    $('.service__card-4').mouseenter( function() {
+      $('.card__title-4').css('color','#000')
+    });
+    $('.service__card-4').mouseleave(function() {
+      $('.card__title-4').css('color','#f1f1f1')
+    });
+    $('.service__card-5').mouseenter( function() {
+      $('.card__title-5').css('color','#000')
+    });
+    $('.service__card-5').mouseleave(function() {
+      $('.card__title-5').css('color','#f1f1f1')
+    });
+    $('.service__card-6').mouseenter( function() {
+      $('.card__title-6').css('color','#000')
+    });
+    $('.service__card-6').mouseleave(function() {
+      $('.card__title-6').css('color','#f1f1f1')
+    });
 });
 /* Скрипт позволяющий карточкам менять текст на цену */
 const items = document.querySelectorAll('.service-block__card');

@@ -111,28 +111,14 @@ button {
 }
 
 @media (max-width: 992px) {
-  body:hover {
-    cursor: default;
-  }
-  html:hover {
-    cursor: default;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
   a:hover {
-    cursor: default !important;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    cursor: default;
   }
   button:hover {
     cursor: default;
-    -webkit-box-shadow: none;
-            box-shadow: none;
   }
   img:hover {
     cursor: default;
-    -webkit-box-shadow: none;
-            box-shadow: none;
   }
 }
 
@@ -455,9 +441,6 @@ button {
     -webkit-box-shadow: none;
             box-shadow: none;
     cursor: default;
-    background: none;
-    border: none;
-    color: #000000;
   }
   .navbar::before {
     content: "";
@@ -469,31 +452,10 @@ button {
   .navbar__button {
     margin: 0;
   }
-  .navbar-menu__item:hover {
-    cursor: default !important;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background: none;
-    border: none;
-    color: #000000;
-  }
-  .navbar-menus a:hover {
-    cursor: default !important;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background: none;
-    border: none;
-    color: #000000;
-  }
 }
 
-.navbar-menu__items a:hover {
-  cursor: default !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: none;
-  border: none;
-  color: #000000;
+.navbar-menu__item:hover {
+  cursor: default;
 }
 
 @media (max-width: 840px) {
@@ -608,15 +570,9 @@ button {
   .navbar-menu__items {
     margin-bottom: 20px;
   }
-  .navbar-menu__items:hover {
-    color: #fffffe;
-  }
   .navbar-menu__item {
     color: #fffffe;
     font-size: 20px;
-  }
-  .navbar-menu__item:hover {
-    color: #fffffe;
   }
   .navbar__logo {
     margin-right: 20px;
@@ -1131,25 +1087,24 @@ em.navbar-invalid {
   transition: 0.2s;
 }
 
-.service-block__card .card__title {
+.service-block__card:hover {
+  /* -webkit-filter: grayscale(0) */
+}
+
+.service-block__card-title {
   position: absolute;
   right: 0;
   bottom: 10px;
   font-size: 20px;
   top: 42%;
   left: 56%;
-  margin-left: -148px;
+  margin-left: -140px;
   margin-top: -40px;
   font-family: 'Proxima Nova Regular',sans-serif;
   font-weight: 400;
   line-height: 28px;
   color: #fdfcfc;
   max-width: 250px;
-  text-align: center;
-}
-
-.service-block__card:hover .card__background {
-  opacity: 1;
 }
 
 .service-block__card-button {
@@ -1157,7 +1112,7 @@ em.navbar-invalid {
   right: 0;
   top: 48%;
   left: 53%;
-  margin-left: -79px;
+  margin-left: -77px;
   margin-top: 19px;
   color: #000000;
   font-family: 'Proxima Nova Semibold',sans-serif;
@@ -1198,11 +1153,12 @@ em.navbar-invalid {
 
 /* .service-block__card-active .service-block__card-button
   color: $secondary */
-.title-active {
-  color: #000000;
+.service-block__card-active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
-.service-block__card-active .card__title {
+.service-block__card-active h2 {
   color: #000000;
 }
 
@@ -1243,17 +1199,9 @@ em.navbar-invalid {
 @media (max-width: 992px) {
   .service:hover {
     cursor: default;
-    -webkit-box-shadow: none;
-            box-shadow: none;
   }
   __button {
     font-size: 30px;
-  }
-  .card__background {
-    opacity: 0.3;
-  }
-  .card__background:hover {
-    opacity: 0.3;
   }
 }
 
@@ -2063,19 +2011,6 @@ em.navbar-invalid {
 @media (max-width: 1200px) {
   .footer:hover {
     cursor: default;
-  }
-}
-
-@media (max-width: 992px) {
-  .footer_social-network img:hover {
-    cursor: default;
-    background: #000;
-    border-radius: 50px;
-  }
-  .footer_social-network .svg:hover {
-    cursor: default;
-    background: #fff;
-    border-radius: 50px;
   }
 }
 

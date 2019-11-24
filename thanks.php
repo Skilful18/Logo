@@ -15,7 +15,7 @@
     <div class="container">
       <div class="navbar-block">
         <div class="navbar__logo">
-          <img src="img/logo.png" alt="logo">
+          <a href="http://mytrueblog.site/mounting/index.php"><img src="img/logo.png" alt="logo"></a>
           <span>LOGO</span>
         </div>
         <!-- /.navbar__logo -->
@@ -128,7 +128,7 @@
   <!-- /.hero -->
 
 
-  <footer class="footer">
+  <footer class="footer" style="margin-top: -135px;">
     <div class="container">
       <div class="footer-block">
         <div class="footer__address">
@@ -137,7 +137,7 @@
         </div>
         <!-- /.footer__address -->
         <div class="footer_social-network">
-          <a href="https://www.instagram.com/"><img src="img/footer/instagram.png" alt="instagram"></a>
+          <a href="https://www.instagram.com/"><img src="img/footer/instagram1.png" alt="instagram"></a>
           <a href="https://vk.com/"><img src="img/footer/vk.png" alt="vk"></a>
           <a href="https://ok.ru/"><img src="img/footer/odnoklassniki.png" alt="odnoklassniki"></a>
         </div>
