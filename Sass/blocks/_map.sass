@@ -133,19 +133,20 @@ em.map-invalid
 @media (max-width: 768px)
   .map
     width: 100%
-    height: 900px
     border: 0
   .modal-map
     position: relative
-    left: 8px
-    top: -894px
+    top: -1010px
     width: 100%
     height: 100%
-    display: block
+    display: flex
+    justify-content: center
     z-index: 2
+    margin-left: -10px
 @media (max-width: 576px)
   .modal-map
-    left: 10px
+    position: relative
+    top: -966px
   .modal
     &-window
       max-width: 300px

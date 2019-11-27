@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AAAA,UAAU,CAAV,SAAU;EACR,IAAI;IACF,OAAO,EAAE,CAAC;;EAGZ,EAAE;IACA,OAAO,EAAE,CAAC;IACV,SAAS,EAAE,wBAAwB;;;;AAIvC,AAAA,UAAU,CAAC;EACT,cAAc,EAAE,SAAS;CAC1B",
     "sources": [
-        "../sass/animate/fading_exits/fadeOutUp.scss"
+        "../Sass/animate/fading_exits/fadeOutUp.scss"
     ],
     "names": [],
     "file": "fadeOutUp.css"

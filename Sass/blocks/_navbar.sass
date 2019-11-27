@@ -7,7 +7,7 @@
     position: absolute
     top: 0
     right: 0
-    height: 80px
+    height: 79px
   &-block
     display: flex
     justify-content: space-between
@@ -18,6 +18,7 @@
     color: $logo
     +bold
     font-size: 15px
+    margin-top: 3px
   &__menu
     display: flex
     justify-content: center
@@ -94,7 +95,7 @@
   .navbar
     &::before
       content: ""
-      width: 20%
+      width: 19.2%
     &__menu
       margin: auto
       margin-right: 20px
@@ -110,6 +111,8 @@
       font-size: 15px
     &__button
       margin: auto 5px
+      font-size: 16px
+      padding: 10px 6px
     &__contacts
       min-width: 130px
 @media (max-width: 1160px)
@@ -187,9 +190,16 @@
       color: $secondary
     &::before
       content: ""
-      width: 13%
+      width: 12.7%
+    &__info
+      background: #f1f1f1
+      display: flex
+      justify-content: flex-end
     &__contacts
-      display: none
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: auto
     &__button
       margin: 0
     &-menu
@@ -216,26 +226,149 @@
       background: none
       border: none
       color: $secondary
-    
-@media (max-width: 840px)
+@media (max-width: 982px)
+  .navbar
+    &::before
+      content: ""
+      width: 12.4%
+@media (max-width: 977px)
+  .navbar
+    &::before
+      content: ""
+      width: 12.1%
+@media (max-width: 963px)
+  .navbar
+    &::before
+      content: ""
+      width: 11.5%
+@media (max-width: 954px)
+  .navbar
+    &::before
+      content: ""
+      width: 11.2%
+@media (max-width: 945px)
+  .navbar
+    &::before
+      content: ""
+      width: 11%
+@media (max-width: 939px)
+  .navbar
+    &::before
+      content: ""
+      width: 10.6%
+@media (max-width: 927px)
+  .navbar
+    &::before
+      content: ""
+      width: 10.1%
+@media (max-width: 920px)
+  .navbar
+    &::before
+      content: ""
+      width: 9.8%
+@media (max-width: 912px)
+  .navbar
+    &::before
+      content: ""
+      width: 9.4%
+@media (max-width: 902px)
+  .navbar
+    &::before
+      content: ""
+      width: 9%
+@media (max-width: 893px)
+  .navbar
+    &::before
+      content: ""
+      width: 8.5%
+@media (max-width: 883px)
+  .navbar
+    &::before
+      content: ""
+      width: 8%
+@media (max-width: 873px)
+  .navbar
+    &::before
+      content: ""
+      width: 7.6%
+@media (max-width: 863px)
+  .navbar
+    &::before
+      content: ""
+      width: 7.1%
+@media (max-width: 858px)
+  .navbar
+    &::before
+      content: ""
+      width: 6.9%
+@media (max-width: 850px)
+  .navbar
+    &::before
+      content: ""
+      width: 6.5%
+@media (max-width: 843px)
   .navbar
     &::before
       content: ""
       width: 6%
+@media (max-width: 834px)
+  .navbar
+    &::before
+      content: ""
+      width: 5.6%
+@media (max-width: 825px)
+  .navbar
+    &::before
+      content: ""
+      width: 5.1%
+@media (max-width: 816px)
+  .navbar
+    &::before
+      content: ""
+      width: 4.7%
+@media (max-width: 807px)
+  .navbar
+    &::before
+      content: ""
+      width: 4.2%
+@media (max-width: 798px)
+  .navbar
+    &::before
+      content: ""
+      width: 3.7%
+@media (max-width: 789px)
+  .navbar
+    &::before
+      content: ""
+      width: 3.2%
+@media (max-width: 780px)
+  .navbar
+    &::before
+      content: ""
+      width: 2.7%
+@media (max-width: 771px)
+  .navbar
+    &::before
+      content: ""
+      width: 2.2%
 @media (max-width: 768px)
   .navbar
     &-menu
       margin-left: -20px
       &__line
         display: none
+    &__contacts
+      display: none
+    &__info
+      background: none
+      justify-content: center
   .mobile
     &-menu
-      display: block
+      display: flex
+      justify-content: flex-end
       margin: auto
       z-index: 2
-      position: absolute
-      top: 13px
-      right: 25px
+      top: 19px
       &__btn
         display: block
         width: 40px
@@ -298,8 +431,6 @@
         opacity: 1
         transition: all 0.4s linear
         z-index: 2
-    &__info
-      margin-right: 65px
     &-menu
       display: block
       &__items
@@ -311,17 +442,7 @@
         font-size: 20px
         &:hover
           color: $hero-text
-    &__logo
-      margin-right: 20px
     &-block
       display: flex
       justify-content: space-around
-@media (max-width: 605px)
-  .navbar
-    &__button
-      padding: 4px 10px
-@media (max-width: 400px)
-  .navbar
-    &__info
-      margin-right: 70px
         

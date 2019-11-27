@@ -135,9 +135,13 @@
           max-width: 300px
 @media (max-width: 768px)
   .what
+    position: initial
+    height: 694px
+    margin-bottom: 412px
     &::before
       content: ""
       width: 100%
+      position: relative
     &-block
       width: 100%
       position: relative
@@ -164,7 +168,15 @@
       padding: 4px 30px
 @media (max-width: 576px)
   .what
+    height: 710px
     .advantages
       &__card
         margin-bottom: 10px
+@media (max-width: 440px)
+  .what
+    height: 1250px
+@media (max-width: 360px)
+  .what
+    height: 1250px
+    margin-bottom: 500px
 
