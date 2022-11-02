@@ -22,6 +22,6 @@
     "gulp-jsmin": "^0.1.5"
   },
   "dependencies": {
-    "fontmin": "^0.9.8"
+    "fontmin": "^0.9.9"
   }
 }
